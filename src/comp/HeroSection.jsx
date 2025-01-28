@@ -19,7 +19,7 @@ const fadeInUp = keyframes`
 const TextGradient = styled.h1`
   font-size: clamp(3rem, 6vw, 6rem); /* Responsive font size */
   font-weight: 800;
-  background: linear-gradient(90deg, #000000 0%, #000000 50%, #000000 100%);
+  background: linear-gradient(90deg, #ff6600 0%, #ff6600 50%, #ff9900 100%); /* Beautiful gradient */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -62,7 +62,7 @@ const HeroSection = () => {
         <TextGradient className="text-5xl md:text-7xl font-extrabold mb-6">
           Civil-Site
         </TextGradient>
-        <ParagraphGradient className="text-lg md:text-2xl mb-6">
+        <ParagraphGradient className="text-lg md:text-3xl mb-6">
           From the ground up, we turn your vision into reality. With precision,
           expertise, and a passion for innovation, we build more than just
           structures—we build the future. Our <HighlightText>focus</HighlightText> is on
@@ -71,7 +71,7 @@ const HeroSection = () => {
         </ParagraphGradient>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <div className="group relative">
-            <Contactusbutton label="Contact Us" />
+            <Contactusbutton label="Reviews" />
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-md"></div>
           </div>
           <div className="group relative">

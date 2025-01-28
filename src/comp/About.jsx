@@ -48,7 +48,7 @@ const About = () => {
           {/* Buttons */}
           <div className="flex gap-4">
             <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg shadow-md hover:scale-105 transition-all">
-              Learn More
+              Socials
             </button>
             <button className="px-6 py-2 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-lg shadow-md hover:scale-105 transition-all">
               Contact Us
