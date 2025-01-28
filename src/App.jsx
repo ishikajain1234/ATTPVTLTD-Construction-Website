@@ -14,6 +14,7 @@ function App() {
     <>
        <Navbar></Navbar>
        <HeroSection></HeroSection>
+      
        <Footer></Footer>
     </>
   )
