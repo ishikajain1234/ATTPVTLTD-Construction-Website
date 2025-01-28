@@ -7,7 +7,7 @@ const Card = ({title, description, iconSrc}) => {
       <div className="container">
         <div className="box">
           <img className="icon" src={iconSrc} alt={`${title} icon`} />
-          <span className="title">{title}</span>
+          <span className="title text-yellow-300">{title}</span>
           {/* Only show description on larger screens */}
           <div className="description">
             <span>{description}</span>
@@ -25,26 +25,16 @@ const StyledWrapper = styled.div`
     font-family: sans-serif;
   }
 
-  .container::before,
-  .container::after {
-    content: "";
-    background-color: #fab5704c;
-    position: absolute;
-  }
-
   .container .box {
     width: 18em;
     height: 23em;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.074);
+    background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.222);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 0.7rem;
     transition: all ease 0.3s;
-  }
-
-  .container .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,16 +65,17 @@ const StyledWrapper = styled.div`
     margin-right: 0.2rem;
   }
 
+  /* Golden glow shadow on hover */
   .container .box:hover {
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 1px solid rgba(255, 255, 255, 0.454);
+    box-shadow: 0px 0px 20px 5px rgba(255, 215, 0, 0.8); /* Golden glow shadow */
+    border: 1px solid rgba(255, 215, 0, 0.8); /* Match shadow color */
   }
 
   /* Media Query for smaller screens (mobile) */
   @media (max-width: 650px) {
     .container .box {
-      width: 10em; /* Even smaller card width for mobile */
-      height: 12em; /* Even smaller height for mobile */
+      width: 10em; /* Smaller card width for mobile */
+      height: 12em; /* Smaller height for mobile */
       padding: 0.5rem; /* Adjust padding for mobile */
     }
 
@@ -96,8 +87,6 @@ const StyledWrapper = styled.div`
       display: none; /* Hide description on mobile */
     }
   }
-
-]
 `;
 
 export default Card;

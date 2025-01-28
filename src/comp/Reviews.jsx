@@ -1,31 +1,49 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 // Importing Font Awesome for icons
-import { FaUserAlt } from 'react-icons/fa';
+import {FaUserAlt} from "react-icons/fa";
 
 const reviews = [
-  { name: "John Doe", text: "Great work! The site was always clean and organized.", icon: <FaUserAlt /> },
-  { name: "Michael Lee", text: "Excellent project delivery on time and within budget.", icon: <FaUserAlt /> },
-  { name: "Emily Davis", text: "Amazing job, safe and well-managed construction site!", icon: <FaUserAlt /> },
-  { name: "Sophia Johnson", text: "Very happy with the outcome. Friendly and skilled workers.", icon: <FaUserAlt /> },
-  { name: "Michael Lee", text: "Excellent project delivery on time and within budget.", icon: <FaUserAlt /> },
-  // Add more reviews as needed...
+  {
+    name: "John Doe",
+    text: "Great work! The site was always clean and organized.",
+    icon: <FaUserAlt />,
+  },
+  {
+    name: "Michael Lee",
+    text: "Excellent project delivery on time and within budget.",
+    icon: <FaUserAlt />,
+  },
+  {
+    name: "Emily Davis",
+    text: "Amazing job, safe and well-managed construction site!",
+    icon: <FaUserAlt />,
+  },
+  {
+    name: "Sophia Johnson",
+    text: "Very happy with the outcome. Friendly and skilled workers.",
+    icon: <FaUserAlt />,
+  },
+  {
+    name: "Michael Lee",
+    text: "Excellent project delivery on time and within budget.",
+    icon: <FaUserAlt />,
+  },
 ];
 
 const Reviews = () => {
   return (
-    <ReviewsContainer>
-      <Title>Reviews</Title>
+    <ReviewsContainer className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 py-16">
+      <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
+        Reviews
+      </h2>
       <ReviewsTrack>
-        {/* Map over the reviews and repeat them to create continuous scrolling */}
         {reviews.concat(reviews).map((review, index) => (
           <CardWrapper key={index}>
             <StyledCard>
               <div className="card-content">
-                <IconContainer>
-                  {review.icon}
-                </IconContainer>
+                <IconContainer>{review.icon}</IconContainer>
                 <h4>{review.name}</h4>
                 <p>{review.text}</p>
               </div>
@@ -39,38 +57,25 @@ const Reviews = () => {
 
 const ReviewsContainer = styled.div`
   width: 100%;
-  min-height: 350px; /* Increased height for more space */
+  min-height: 350px;
   overflow: hidden;
-  background: linear-gradient(135deg, #000000, #555555);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  padding: 30px 10px; /* Adjusted padding for more space around */
-  margin-top: 0;
+  color: white;
   display: flex;
-  justify-content: center; /* Center the track horizontally */
-  flex-direction: column; /* Added to stack content vertically */
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-`;
-
-const Title = styled.h2`
-  font-size: 2.5rem;
-  font-weight: bold;
-  background: linear-gradient(45deg, #ff4081, #ffeb3b);
-  -webkit-background-clip: text;
-  color: transparent;
-  margin-bottom: 20px;
-  text-align: center;
 `;
 
 const ReviewsTrack = styled.div`
   display: flex;
-  animation: moveCards 40s linear infinite; /* Slower continuous horizontal scroll */
+  animation: moveCards 40s linear infinite;
 
   @keyframes moveCards {
     0% {
-      transform: translateX(50%); /* Start from the center */
+      transform: translateX(50%);
     }
     100% {
-      transform: translateX(-50%); /* Move to the left */
+      transform: translateX(-50%);
     }
   }
 `;
@@ -78,14 +83,18 @@ const ReviewsTrack = styled.div`
 const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 15px; /* Added more space around the cards */
-  margin-bottom: 20px; /* Space between cards */
+  padding: 0 15px;
+  margin-bottom: 20px;
 `;
 
 const StyledCard = styled.div`
-  width: 350px; /* Increased width */
-  height: 300px; /* Increased height */
-  background: linear-gradient(135deg, rgba(255, 99, 132, 0.8), rgba(255, 159, 64, 0.8));
+  width: 350px;
+  height: 300px;
+  background: linear-gradient(
+    135deg,
+    #ffd700,
+    #000000
+  ); /* Golden to black gradient */
   border-radius: 15px;
   padding: 25px;
   color: white;
@@ -126,7 +135,7 @@ const IconContainer = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 215, 0, 0.2); /* Subtle golden background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +144,7 @@ const IconContainer = styled.div`
   svg {
     width: 40px;
     height: 40px;
-    color: white;
+    color: #ffd700; /* Golden icon color */
   }
 `;
 

@@ -14,7 +14,9 @@ const OurServices = () => {
     <div className="bg-gradient-to-r from-gray-700 to-gray-900 text-white py-16">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
+          Our Services
+        </h2>
       </div>
 
       {/* Card Grid */}
