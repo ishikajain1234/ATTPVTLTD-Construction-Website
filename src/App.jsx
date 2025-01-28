@@ -5,6 +5,8 @@ import HeroSection from "./comp/HeroSection";
 import About from "./comp/About";
 import OurServices from "./comp/OurServices";
 import Contactus from "./comp/Contactus";
+import Flow from "./comp/Flow";
+
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
       <HeroSection></HeroSection>
       <About></About>
       <OurServices></OurServices>
+         <Flow></Flow>
       <Contactus></Contactus>
       <Footer></Footer>
     </>
