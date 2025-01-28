@@ -6,6 +6,7 @@ import { Button } from './components/ui/button'
 import Navbar from './comp/navbar'
 import Footer from './comp/Footer'
 import HeroSection from './comp/HeroSection'
+import About from './comp/About'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,7 +15,7 @@ function App() {
     <>
        <Navbar></Navbar>
        <HeroSection></HeroSection>
-      
+          <About></About>
        <Footer></Footer>
     </>
   )
