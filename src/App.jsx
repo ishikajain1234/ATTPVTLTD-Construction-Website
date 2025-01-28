@@ -5,6 +5,7 @@ import './App.css'
 import { Button } from './components/ui/button'
 import Navbar from './comp/navbar'
 import Footer from './comp/Footer'
+import HeroSection from './comp/HeroSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
        <Navbar></Navbar>
+       <HeroSection></HeroSection>
        <Footer></Footer>
     </>
   )
