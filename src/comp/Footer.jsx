@@ -1,11 +1,17 @@
-import { Landmark } from "lucide-react";
+import {Landmark} from "lucide-react";
 import React from "react";
+import Social from "./Social";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white p-6">
+      {/* Social Media Section (Centered on top) */}
+      <div className="flex justify-center mb-8">
+        <Social />
+      </div>
+
+      {/* Footer Content Section */}
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left">
-        
         {/* About Section */}
         <div>
           <h2 className="text-xl font-semibold mb-4 flex justify-center md:justify-start items-center gap-2">
@@ -22,22 +28,34 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#services" className="text-gray-400 hover:text-white transition duration-300">
+              <a
+                href="#services"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
                 Services
               </a>
             </li>
             <li>
-              <a href="#projects" className="text-gray-400 hover:text-white transition duration-300">
+              <a
+                href="#projects"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#about" className="text-gray-400 hover:text-white transition duration-300">
+              <a
+                href="#about"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
                 About Us
               </a>
             </li>
             <li>
-              <a href="#contact" className="text-gray-400 hover:text-white transition duration-300">
+              <a
+                href="#contact"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
                 Contact
               </a>
             </li>
