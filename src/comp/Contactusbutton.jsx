@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Contactusbutton = () => {
+const Contactusbutton = ({label = "Contact Us"}) => {
   return (
     <StyledWrapper>
       <button className="btn cube cube-hover" type="button">
@@ -14,7 +14,7 @@ const Contactusbutton = () => {
         <div className="bg">
           <div className="bg-inner" />
         </div>
-        <div className="text">Contact Us</div>
+        <div className="text">{label}</div>
       </button>
     </StyledWrapper>
   );
