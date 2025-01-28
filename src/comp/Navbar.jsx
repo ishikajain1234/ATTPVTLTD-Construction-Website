@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4">
+    <nav className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Clickable Civil-Site Logo */}
         <a href="/" className="flex items-center gap-2 text-2xl font-bold hover:text-gray-300 transition duration-300">
