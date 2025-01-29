@@ -9,30 +9,18 @@ import Contactus from "./comp/Contactus";
 import Flow from "./comp/Flow";
 import Reviews from "./comp/Reviews";
 
+
 function App() {
   return (
     <>
-      <Navbar />
-      <div id="hero">
-        <HeroSection />
-      </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="services">
-        <OurServices />
-      </div>
-      
-      <div id="workflow">
-        <Flow />
-      </div>
-      <div id="reviews">
-        <Reviews />
-      </div>
-      <div id="contact">
-        <Contactus />
-      </div>
-      <Footer />
+      <Navbar></Navbar>
+      <HeroSection></HeroSection>
+      <About></About>
+      <OurServices></OurServices>
+         <Flow></Flow>
+         <Reviews></Reviews>
+      <Contactus></Contactus>
+      <Footer></Footer>
     </>
   );
 }
