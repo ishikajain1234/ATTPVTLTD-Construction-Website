@@ -7,18 +7,18 @@ import OurServices from "./comp/OurServices";
 import Contactus from "./comp/Contactus";
 import Flow from "./comp/Flow";
 import Reviews from "./comp/Reviews";
-
+import Projects from "./comp/Projects";
 
 function App() {
-
   return (
     <>
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <About></About>
       <OurServices></OurServices>
-         <Flow></Flow>
-         <Reviews></Reviews>
+      <Flow></Flow>
+      <Projects></Projects>
+      <Reviews></Reviews>
       <Contactus></Contactus>
       <Footer></Footer>
     </>
