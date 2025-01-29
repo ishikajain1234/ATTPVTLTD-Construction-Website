@@ -22,14 +22,15 @@ function App() {
       <div id="services">
         <OurServices />
       </div>
-      <div id="contact">
-        <Contactus />
-      </div>
+      
       <div id="workflow">
         <Flow />
       </div>
       <div id="reviews">
         <Reviews />
+      </div>
+      <div id="contact">
+        <Contactus />
       </div>
       <Footer />
     </>
