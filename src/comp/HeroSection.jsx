@@ -19,8 +19,7 @@ const fadeInUp = keyframes`
 const TextGradient = styled.h1`
   font-size: clamp(3rem, 6vw, 6rem); /* Responsive font size */
   font-weight: 800;
-  background: linear-gradient(90deg, #ff6600 0%, #ff6600 50%, #ff9900 100%); /* Beautiful gradient */
-  -webkit-background-clip: text;
+  background: #FFD700;
   background-clip: text;
   color: transparent;
   letter-spacing: 0.1em;
@@ -41,7 +40,7 @@ const ParagraphGradient = styled.p`
 `;
 
 const HighlightText = styled.span`
-  color: #ff6600; /* Orange color for emphasis */
+  color: #FFD700; /* Orange color for emphasis */
   font-weight: bold;
   font-size: 1.2rem; /* Larger font size for emphasis */
 `;
