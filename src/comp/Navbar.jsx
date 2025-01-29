@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {Home, Info, Briefcase, Mail, Landmark, Menu, X} from "lucide-react";
+import {Home, Info, Briefcase, Mail, Landmark, Menu, X, Building} from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,6 +63,12 @@ const Navbar = () => {
             <Briefcase size={20} /> Services
           </li>
           <li
+            onClick={() => scrollToSection("project")}
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
+          >
+            <Building size={20} /> Projects
+          </li>
+          <li
             onClick={() => scrollToSection("contact")}
             className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
@@ -100,6 +106,15 @@ const Navbar = () => {
             className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Briefcase size={20} /> Services
+          </li>
+          <li
+            onClick={() => {
+              scrollToSection("project");
+              setIsOpen(false);
+            }}
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
+          >
+            <Building size={20} /> Projects
           </li>
           <li
             onClick={() => {

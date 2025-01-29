@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import Aboutbuttons from "./Aboutbuttons";
@@ -6,12 +6,12 @@ import img from "../assets/aboutsectionimg.jpg";
 
 const About = () => {
   useEffect(() => {
-    AOS.init({duration: 1000, once: true}); // Initialize AOS with 1-second duration and triggers only once
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
     <div
-      className="relative flex flex-col md:flex-row items-center text-white p-4 py-16 overflow-hidden" // Added overflow-hidden class
+      className="relative flex flex-col md:flex-row items-center text-white p-4 py-16 overflow-hidden"
       style={{
         background:
           "linear-gradient(90deg, rgba(69,61,17,1) 0%, rgba(0,0,0,1) 50%, rgba(69,61,17,1) 100%)",
@@ -36,7 +36,6 @@ const About = () => {
         data-aos="fade-left"
         data-aos-offset="200"
       >
-        {/* Experience & Projects */}
         <p className="text-4xl font-bold text-yellow-400 mb-2">
           25+ Years of Experience | 10+ Projects
         </p>
@@ -59,8 +58,8 @@ const About = () => {
 
         {/* Buttons */}
         <div className="flex gap-4">
-          <Aboutbuttons text="Socials" />
-          <Aboutbuttons text="Contact us" />
+          <Aboutbuttons text="Socials" targetSection="footer" />
+          <Aboutbuttons text="Contact us" targetSection="contact" />
         </div>
       </div>
     </div>

@@ -23,11 +23,10 @@ function App() {
       <div id="services">
         <OurServices />
       </div>
-
       <div id="workflow">
         <Flow />
       </div>
-      <div className="projects">
+      <div id="project">
         <Projects />
       </div>
       <div id="reviews">
@@ -36,7 +35,9 @@ function App() {
       <div id="contact">
         <Contactus />
       </div>
-      <Footer />
+      <div id="footer">
+        <Footer />
+      </div>
     </>
   );
 }

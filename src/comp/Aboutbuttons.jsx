@@ -1,14 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
-const Aboutbuttons = ({text}) => {
+// Button Component
+const Aboutbuttons = ({ text, targetSection }) => {
+
+  // Function to handle scroll when button is clicked
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <StyledWrapper>
-      <button className="neon-button">{text}</button>
+      <button
+        className="neon-button"
+        onClick={() => scrollToSection(targetSection)} // Scroll to the target section
+      >
+        {text}
+      </button>
     </StyledWrapper>
   );
 };
 
+// Styled Button CSS
 const StyledWrapper = styled.div`
   .neon-button {
     position: relative;
