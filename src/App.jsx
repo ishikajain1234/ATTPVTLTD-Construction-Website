@@ -8,6 +8,7 @@ import OurServices from "./comp/OurServices";
 import Contactus from "./comp/Contactus";
 import Flow from "./comp/Flow";
 import Reviews from "./comp/Reviews";
+import Projects from "./comp/Projects";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
 
       <div id="workflow">
         <Flow />
+      </div>
+      <div className="projects">
+        <Projects/>
       </div>
       <div id="reviews">
         <Reviews />
