@@ -1,10 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Contactusbutton = ({label = "Contact Us"}) => {
+const Contactusbutton = ({ label = "Contact Us", targetSection }) => {
+
+  // Function to handle smooth scrolling
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <StyledWrapper>
-      <button className="btn cube cube-hover" type="button">
+      <button
+        className="btn cube cube-hover"
+        type="button"
+        onClick={() => scrollToSection(targetSection)} // Scroll to target section
+      >
         <div className="bg-top">
           <div className="bg-inner" />
         </div>

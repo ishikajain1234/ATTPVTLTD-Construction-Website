@@ -3,7 +3,6 @@ import backgroundImage from "../assets/main_img.jpeg";
 import Contactusbutton from "./Contactusbutton";
 import styled, { keyframes } from "styled-components";
 
-
 // Keyframes for fade-in and slide-up effect
 const fadeInUp = keyframes`
   0% {
@@ -41,7 +40,6 @@ const ParagraphGradient = styled.p`
   animation: ${fadeInUp} 1.5s ease-out 0.5s; /* Delay for paragraph animation */
 `;
 
-
 const HighlightText = styled.span`
   color: #FFD700; /* Orange color for emphasis */
   font-weight: bold;
@@ -59,7 +57,7 @@ const HeroSection = () => {
       {/* Gradient Overlay for Beautiful Effect */}
       <div
         className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"
-        style={{backdropFilter: "blur(2px)"}}
+        style={{ backdropFilter: "blur(2px)" }}
       ></div>
 
       {/* Content Section */}
@@ -77,11 +75,11 @@ const HeroSection = () => {
         </ParagraphGradient>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <div className="group relative">
-            <Contactusbutton label="Reviews" />
+            <Contactusbutton label="Reviews" targetSection="reviews" />
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-md"></div>
           </div>
           <div className="group relative">
-            <Contactusbutton label="Our Work Flow" />
+            <Contactusbutton label="Our Work Flow" targetSection="workflow" />
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-md"></div>
           </div>
         </div>
