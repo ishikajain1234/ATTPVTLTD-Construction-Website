@@ -1,7 +1,8 @@
 import React from "react";
-import backgroundImage from "../assets/wp1842344.jpg";
+import backgroundImage from "../assets/main_img.jpeg";
 import Contactusbutton from "./Contactusbutton";
 import styled, { keyframes } from "styled-components";
+
 
 // Keyframes for fade-in and slide-up effect
 const fadeInUp = keyframes`
@@ -56,18 +57,22 @@ const HeroSection = () => {
       }}
     >
       {/* Gradient Overlay for Beautiful Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70"></div>
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"
+        style={{backdropFilter: "blur(2px)"}}
+      ></div>
 
       {/* Content Section */}
-      <div className="relative z-10 text-center p-6 max-w-3xl">
+      <div className="relative z-10 text-center p-6 max-w-4xl ml-auto mr-12">
         <TextGradient className="text-5xl md:text-7xl font-extrabold mb-6">
           Civil-Site
         </TextGradient>
         <ParagraphGradient className="text-lg md:text-3xl mb-6">
           From the ground up, we turn your vision into reality. With precision,
           expertise, and a passion for innovation, we build more than just
-          structures—we build the future. Our <HighlightText>focus</HighlightText> is on
-          creating lasting relationships, and our <HighlightText>commitment</HighlightText>
+          structures—we build the future. Our{" "}
+          <HighlightText>focus</HighlightText> is on creating lasting
+          relationships, and our <HighlightText>commitment</HighlightText>
           to quality is unmatched.
         </ParagraphGradient>
         <div className="flex flex-col md:flex-row gap-4 justify-center">

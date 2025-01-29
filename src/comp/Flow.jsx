@@ -45,7 +45,7 @@ const Workflow = () => {
       }}
     >
       <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
-        Construction Workflow
+        C  o  n  s  t  r  u  c  t  i  o  n - W  o  r  k  f  l  o  w
       </h2>
       <div className="flex flex-wrap justify-center items-center gap-12">
         {steps.map((step, index) => (

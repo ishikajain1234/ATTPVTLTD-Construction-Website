@@ -28,7 +28,7 @@ function App() {
         <Flow />
       </div>
       <div className="projects">
-        <Projects/>
+        <Projects />
       </div>
       <div id="reviews">
         <Reviews />

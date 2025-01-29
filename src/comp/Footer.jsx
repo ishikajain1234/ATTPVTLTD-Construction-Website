@@ -1,13 +1,22 @@
+import Whatsapp from "@/socials icons/Whatsapp";
+import Instagram from "@/socials icons/Instagram";
 import {Landmark} from "lucide-react";
 import React from "react";
-import Social from "./Social";
+import { Link } from "react-router-dom";
+import Linkedin from "@/socials icons/Linkedin";
+import Facebook from "@/socials icons/Facebook";
+import X from "@/socials icons/X";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white p-6">
+    <footer className="w-full bg-black text-white p-6 relative">
       {/* Social Media Section (Centered on top) */}
-      <div className="flex justify-center mb-8">
-        <Social />
+      <div className="flex justify-center mb-8 relative z-10 gap-10">
+        <Instagram />
+        <Whatsapp />
+        <Linkedin />
+        <Facebook />
+        <X />
       </div>
 
       {/* Footer Content Section */}

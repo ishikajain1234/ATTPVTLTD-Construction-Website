@@ -15,11 +15,11 @@ const Projects = () => {
           "linear-gradient(90deg, rgba(69, 61, 17, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(69, 61, 17, 1) 100%)",
       }}
     >
-      <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
-        Projects
-      </h2>
+      <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide ">
+        P  r  o  j  e  c  t  s
+      </h2> 
       <div className="flex flex-wrap justify-center items-center gap-12">
-        <Project
+        <Project 
           imgSrc={modernhouse}
           title="Townhome Revitalization"
           description="Revitalized 3 townhomes on Sector 22, Block C, Gurgaon with modern kitchens, stylish bathrooms, and updated interiors."

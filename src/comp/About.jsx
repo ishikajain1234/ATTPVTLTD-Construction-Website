@@ -1,6 +1,8 @@
 import React, {useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import Aboutbuttons from "./Aboutbuttons";
+import img from "../assets/aboutsectionimg.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -9,7 +11,7 @@ const About = () => {
 
   return (
     <div
-      className="relative flex flex-col md:flex-row items-center text-white p-4 py-16"
+      className="relative flex flex-col md:flex-row items-center text-white p-4 py-16 overflow-hidden" // Added overflow-hidden class
       style={{
         background:
           "linear-gradient(90deg, rgba(69,61,17,1) 0%, rgba(0,0,0,1) 50%, rgba(69,61,17,1) 100%)",
@@ -22,7 +24,7 @@ const About = () => {
         data-aos-offset="200"
       >
         <img
-          src="/photo.jpg"
+          src={img}
           alt="Construction"
           className="w-3/5 h-auto rounded-2xl shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
         />
@@ -35,12 +37,12 @@ const About = () => {
         data-aos-offset="200"
       >
         {/* Experience & Projects */}
-        <p className="text-2xl font-bold text-blue-400 mb-2">
+        <p className="text-4xl font-bold text-yellow-400 mb-2">
           25+ Years of Experience | 10+ Projects
         </p>
 
         <h2 className="text-4xl font-bold text-white mb-4">
-          About Our Construction
+          About Our Company...
         </h2>
         <p className="text-gray-300 mb-6">
           At our company, we take pride in crafting modern, high-quality
@@ -57,12 +59,8 @@ const About = () => {
 
         {/* Buttons */}
         <div className="flex gap-4">
-          <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg shadow-md hover:scale-105 transition-all">
-            Socials
-          </button>
-          <button className="px-6 py-2 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-lg shadow-md hover:scale-105 transition-all">
-            Contact Us
-          </button>
+          <Aboutbuttons text="Socials" />
+          <Aboutbuttons text="Contact us" />
         </div>
       </div>
     </div>

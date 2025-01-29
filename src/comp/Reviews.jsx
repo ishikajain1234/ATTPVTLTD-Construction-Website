@@ -101,8 +101,8 @@ const reviews = [
 const Reviews = () => {
   return (
     <ReviewsContainer>
-      <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
-        Reviews
+      <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide ">
+        R  e  v  i  e  w  s
       </h2>
       <ReviewsTrack>
         {reviews.concat(reviews).map((review, index) => (

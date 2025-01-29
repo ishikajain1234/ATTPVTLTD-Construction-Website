@@ -46,25 +46,25 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 text-lg">
           <li
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Home size={20} /> Home
           </li>
           <li
             onClick={() => scrollToSection("about")}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Info size={20} /> About
           </li>
           <li
             onClick={() => scrollToSection("services")}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Briefcase size={20} /> Services
           </li>
           <li
             onClick={() => scrollToSection("contact")}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Mail size={20} /> Contact
           </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
               scrollToSection("hero");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Home size={20} /> Home
           </li>
@@ -88,7 +88,7 @@ const Navbar = () => {
               scrollToSection("about");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Info size={20} /> About
           </li>
@@ -97,7 +97,7 @@ const Navbar = () => {
               scrollToSection("services");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Briefcase size={20} /> Services
           </li>
@@ -106,7 +106,7 @@ const Navbar = () => {
               scrollToSection("contact");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition-transform transform hover:scale-110 duration-300 cursor-pointer"
           >
             <Mail size={20} /> Contact
           </li>

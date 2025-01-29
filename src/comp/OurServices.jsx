@@ -12,7 +12,7 @@ import engineers from "../assets/engineers.png";
 const OurServices = () => {
   return (
     <div
-      className="text-white py-16"
+      className="text-white py-16 "
       style={{
         background:
           "linear-gradient(90deg, rgba(69,61,17,1) 0%, rgba(0,0,0,1) 50%, rgba(69,61,17,1) 100%)",
@@ -20,8 +20,8 @@ const OurServices = () => {
     >
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
-          Our Services
+        <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide ">
+          O  u  r - S  e  r  v  i  c  e  s
         </h2>
       </div>
 
