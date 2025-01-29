@@ -1,5 +1,6 @@
+import React from "react";
 import "./App.css";
-import Navbar from "./comp/navbar";
+import Navbar from "./comp/Navbar";
 import Footer from "./comp/Footer";
 import HeroSection from "./comp/HeroSection";
 import About from "./comp/About";
@@ -8,19 +9,29 @@ import Contactus from "./comp/Contactus";
 import Flow from "./comp/Flow";
 import Reviews from "./comp/Reviews";
 
-
 function App() {
-
   return (
     <>
-      <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <About></About>
-      <OurServices></OurServices>
-         <Flow></Flow>
-         <Reviews></Reviews>
-      <Contactus></Contactus>
-      <Footer></Footer>
+      <Navbar />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="services">
+        <OurServices />
+      </div>
+      <div id="contact">
+        <Contactus />
+      </div>
+      <div id="workflow">
+        <Flow />
+      </div>
+      <div id="reviews">
+        <Reviews />
+      </div>
+      <Footer />
     </>
   );
 }
