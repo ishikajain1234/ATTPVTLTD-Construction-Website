@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
-import { Home, Info, Briefcase, Mail, Landmark, Menu, X } from "lucide-react";
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Home, Info, Briefcase, Mail, Landmark, Menu, X} from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,19 +19,19 @@ const Navbar = () => {
 
   // Handle logo click to scroll to "hero" section
   const handleLogoClick = () => {
-    navigate("/");  // This will navigate to home page
+    navigate("/"); // This will navigate to home page
     scrollToSection("hero"); // Then scroll to the "hero" section
   };
 
   return (
-    <nav className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 sticky top-0 z-50">
+    <nav className="bg-black text-white p-4 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Civil-Site Logo */}
         <button
           onClick={handleLogoClick}
-          className="flex items-center gap-2 text-2xl font-bold hover:text-gray-300 transition duration-300"
+          className="flex items-center gap-2 text-2xl font-bold text-white"
         >
-          <Landmark size={28} /> Civil-Site
+          <Landmark size={28} className="text-white" /> Civil-Site
         </button>
 
         {/* Mobile Menu Button */}
@@ -46,25 +46,25 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 text-lg">
           <li
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Home size={20} /> Home
           </li>
           <li
             onClick={() => scrollToSection("about")}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Info size={20} /> About
           </li>
           <li
             onClick={() => scrollToSection("services")}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Briefcase size={20} /> Services
           </li>
           <li
             onClick={() => scrollToSection("contact")}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Mail size={20} /> Contact
           </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
               scrollToSection("hero");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Home size={20} /> Home
           </li>
@@ -88,7 +88,7 @@ const Navbar = () => {
               scrollToSection("about");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Info size={20} /> About
           </li>
@@ -97,7 +97,7 @@ const Navbar = () => {
               scrollToSection("services");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Briefcase size={20} /> Services
           </li>
@@ -106,7 +106,7 @@ const Navbar = () => {
               scrollToSection("contact");
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 cursor-pointer"
+            className="flex items-center gap-2 text-yellow-400 hover:text-white transition duration-300 cursor-pointer"
           >
             <Mail size={20} /> Contact
           </li>

@@ -1,53 +1,117 @@
 import React from "react";
 import styled from "styled-components";
+import Reviewcard from "./Reviewcard.jsx";
+import man from "../avatars/man.png";
+import gamer from "../avatars/gamer.png";
+import girl from "../avatars/girl.png";
+import user from "../avatars/user.png";
+import woman1 from "../avatars/woman (1).png";
+import woman from "../avatars/woman.png";
+import profile2 from "../avatars/profile (2).png";
 
-// Importing Font Awesome for icons
-import {FaUserAlt} from "react-icons/fa";
+
 
 const reviews = [
   {
-    name: "John Doe",
-    text: "Great work! The site was always clean and organized.",
-    icon: <FaUserAlt />,
-  },
-  {
+    imageSrc: man,
     name: "Michael Lee",
-    text: "Excellent project delivery on time and within budget.",
-    icon: <FaUserAlt />,
+    description:
+      "Excellent project delivery on time and within budget. Highly recommend for any construction work!",
   },
   {
+    imageSrc: woman1,
+    name: "Sarah Johnson",
+    description:
+      "Professional and reliable team. They delivered my office building with high standards and on schedule.",
+  },
+  {
+    imageSrc: gamer,
+    name: "John Smith",
+    description:
+      "Great experience working with them. The quality of construction and attention to detail was exceptional.",
+  },
+  {
+    imageSrc: woman,
     name: "Emily Davis",
-    text: "Amazing job, safe and well-managed construction site!",
-    icon: <FaUserAlt />,
+    description:
+      "A trusted partner for our industrial projects. They completed the work without any issues and with great efficiency.",
   },
   {
-    name: "Sophia Johnson",
-    text: "Very happy with the outcome. Friendly and skilled workers.",
-    icon: <FaUserAlt />,
+    imageSrc: user,
+    name: "David Wilson",
+    description:
+      "We’ve had multiple projects with them, and they always deliver top-notch results. Always stay on top of deadlines.",
   },
   {
+    imageSrc: girl,
+    name: "Daniel Brown",
+    description:
+      "The construction team was highly skilled, and the finished product exceeded our expectations. Highly recommend their services.",
+  },
+  {
+    imageSrc: profile2,
+    name: "Lucas Harris",
+    description:
+      "One of the best teams I've worked with in terms of construction expertise and project management. Highly recommended for large-scale projects.",
+  },
+  {
+    imageSrc: man,
     name: "Michael Lee",
-    text: "Excellent project delivery on time and within budget.",
-    icon: <FaUserAlt />,
+    description:
+      "Excellent project delivery on time and within budget. Highly recommend for any construction work!",
+  },
+  {
+    imageSrc: woman1,
+    name: "Sarah Johnson",
+    description:
+      "Professional and reliable team. They delivered my office building with high standards and on schedule.",
+  },
+  {
+    imageSrc: gamer,
+    name: "John Smith",
+    description:
+      "Great experience working with them. The quality of construction and attention to detail was exceptional.",
+  },
+  {
+    imageSrc: woman,
+    name: "Emily Davis",
+    description:
+      "A trusted partner for our industrial projects. They completed the work without any issues and with great efficiency.",
+  },
+  {
+    imageSrc: user,
+    name: "David Wilson",
+    description:
+      "We’ve had multiple projects with them, and they always deliver top-notch results. Always stay on top of deadlines.",
+  },
+  {
+    imageSrc: girl,
+    name: "Daniel Brown",
+    description:
+      "The construction team was highly skilled, and the finished product exceeded our expectations. Highly recommend their services.",
+  },
+  {
+    imageSrc: profile2,
+    name: "Lucas Harris",
+    description:
+      "One of the best teams I've worked with in terms of construction expertise and project management. Highly recommended for large-scale projects.",
   },
 ];
 
 const Reviews = () => {
   return (
-    <ReviewsContainer className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 py-16">
+    <ReviewsContainer>
       <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
         Reviews
       </h2>
       <ReviewsTrack>
         {reviews.concat(reviews).map((review, index) => (
           <CardWrapper key={index}>
-            <StyledCard>
-              <div className="card-content">
-                <IconContainer>{review.icon}</IconContainer>
-                <h4>{review.name}</h4>
-                <p>{review.text}</p>
-              </div>
-            </StyledCard>
+            <Reviewcard
+              imageSrc={review.imageSrc}
+              title={review.name}
+              description={review.description}
+            />
           </CardWrapper>
         ))}
       </ReviewsTrack>
@@ -59,11 +123,17 @@ const ReviewsContainer = styled.div`
   width: 100%;
   min-height: 350px;
   overflow: hidden;
-  color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(69, 61, 17, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(69, 61, 17, 1) 100%
+  );
+  color: white;
 `;
 
 const ReviewsTrack = styled.div`
@@ -72,8 +142,8 @@ const ReviewsTrack = styled.div`
 
   @keyframes moveCards {
     0% {
-      transform: translateX(50%);
-    }
+      transform: translateX(0%);
+    } 
     100% {
       transform: translateX(-50%);
     }
@@ -85,67 +155,6 @@ const CardWrapper = styled.div`
   justify-content: center;
   padding: 0 15px;
   margin-bottom: 20px;
-`;
-
-const StyledCard = styled.div`
-  width: 350px;
-  height: 300px;
-  background: linear-gradient(
-    135deg,
-    #ffd700,
-    #000000
-  ); /* Golden to black gradient */
-  border-radius: 15px;
-  padding: 25px;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    text-align: center;
-    align-items: center;
-  }
-
-  h4 {
-    margin: 10px 0;
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: #f1f1f1;
-  }
-`;
-
-const IconContainer = styled.div`
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: rgba(255, 215, 0, 0.2); /* Subtle golden background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-
-  svg {
-    width: 40px;
-    height: 40px;
-    color: #ffd700; /* Golden icon color */
-  }
 `;
 
 export default Reviews;

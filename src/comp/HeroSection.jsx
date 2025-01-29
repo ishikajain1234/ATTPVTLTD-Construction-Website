@@ -36,8 +36,10 @@ const ParagraphGradient = styled.p`
   line-height: 1.8;
   letter-spacing: 0.05em;
   font-size: clamp(1rem, 2vw, 1.25rem); /* Adjusts based on screen size */
+  font-weight: bold; /* Added bold to the paragraph */
   animation: ${fadeInUp} 1.5s ease-out 0.5s; /* Delay for paragraph animation */
 `;
+
 
 const HighlightText = styled.span`
   color: #FFD700; /* Orange color for emphasis */

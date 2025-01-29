@@ -1,14 +1,20 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
 const About = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Initialize AOS with 1-second duration and triggers only once
+    AOS.init({duration: 1000, once: true}); // Initialize AOS with 1-second duration and triggers only once
   }, []);
 
   return (
-    <div className="relative flex flex-col md:flex-row items-center bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 py-16">
+    <div
+      className="relative flex flex-col md:flex-row items-center text-white p-4 py-16"
+      style={{
+        background:
+          "linear-gradient(90deg, rgba(69,61,17,1) 0%, rgba(0,0,0,1) 50%, rgba(69,61,17,1) 100%)",
+      }}
+    >
       {/* Image Section */}
       <div
         className="md:w-1/2 flex justify-center"
