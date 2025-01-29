@@ -8,6 +8,7 @@ import OurServices from "./comp/OurServices";
 import Contactus from "./comp/Contactus";
 import Flow from "./comp/Flow";
 import Reviews from "./comp/Reviews";
+import Project from "./comp/Project";
 
 function App() {
   return (
@@ -22,14 +23,18 @@ function App() {
       <div id="services">
         <OurServices />
       </div>
-      <div id="contact">
-        <Contactus />
-      </div>
+     
       <div id="workflow">
         <Flow />
       </div>
+      <div id="projects">
+        <Project />
+      </div>
       <div id="reviews">
         <Reviews />
+      </div>
+      <div id="contact">
+        <Contactus />
       </div>
       <Footer />
     </>
