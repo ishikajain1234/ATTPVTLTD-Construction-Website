@@ -1,14 +1,20 @@
 import React from "react";
 import Project from "./Project";
-import modernhouse from "../assets/modern-house.png";
-import cafe from "../assets/cafe.png";
-import mixertruck from "../assets/mixer-truck (1).png";
-import constructionsite from "../assets/construction-site.png";
-import wrekingball from "../assets/wrecking-ball.png";
+import modernhouse from "../project icons/modern-house.png";
+import cafe from "../project icons/cafe.png";
+import mixertruck from "../project icons/mixer-truck (1).png";
+import constructionsite from "../project icons/construction-site.png";
+import wrekingball from "../project icons/wrecking-ball.png";
 
 const Projects = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 py-16">
+    <div
+      className="text-white p-4 py-16"
+      style={{
+        background:
+          "linear-gradient(90deg, rgba(69, 61, 17, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(69, 61, 17, 1) 100%)",
+      }}
+    >
       <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
         Projects
       </h2>

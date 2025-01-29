@@ -37,7 +37,13 @@ const Workflow = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-4 py-16">
+    <div
+      className="text-white p-4 py-16"
+      style={{
+        background:
+          "linear-gradient(90deg, rgba(69,61,17,1) 0%, rgba(0,0,0,1) 50%, rgba(69,61,17,1) 100%)",
+      }}
+    >
       <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
         Construction Workflow
       </h2>
@@ -52,7 +58,7 @@ const Workflow = () => {
             </div>
             <h3 className="text-lg font-semibold mt-4">{step.title}</h3>
             <p className="text-gray-300 text-sm">{step.description}</p>
-            {index !== steps.length - 1 && (
+            {index !== steps.length && (
               <div className="h-1 w-16 bg-yellow-400 mt-4"></div>
             )}
           </div>
