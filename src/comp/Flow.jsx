@@ -38,14 +38,15 @@ const Workflow = () => {
 
   return (
     <div
-      className="text-white p-4 py-16"
+      className="text-white p-4 sm:p-6 md:p-16 py-12"
       style={{
         background:
           "linear-gradient(90deg, rgba(69,61,17,1) 0%, rgba(0,0,0,1) 50%, rgba(69,61,17,1) 100%)",
       }}
     >
-      <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12 tracking-wide">
-        C  o  n  s  t  r  u  c  t  i  o  n - W  o  r  k  f  l  o  w
+      {/* Adjusted title font size for smaller screens */}
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-6 sm:mb-8 tracking-wide sm:tracking-normal">
+        C o n s t r u c t i o n - W o r k f l o w
       </h2>
       <div className="flex flex-wrap justify-center items-center gap-12">
         {steps.map((step, index) => (
@@ -56,9 +57,9 @@ const Workflow = () => {
             <div className="bg-yellow-500 p-5 rounded-full shadow-lg shadow-yellow-500/50">
               {step.icon}
             </div>
-            <h3 className="text-lg font-semibold mt-4">{step.title}</h3>
-            <p className="text-gray-300 text-sm">{step.description}</p>
-            {index !== steps.length && (
+            <h3 className="text-sm sm:text-lg font-semibold mt-4">{step.title}</h3>
+            <p className="text-gray-300 text-xs sm:text-sm">{step.description}</p>
+            {index !== steps.length - 1 && (
               <div className="h-1 w-16 bg-yellow-400 mt-4"></div>
             )}
           </div>

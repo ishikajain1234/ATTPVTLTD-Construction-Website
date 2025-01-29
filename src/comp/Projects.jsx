@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Project from "./Project";
 import modernhouse from "../project icons/modern-house.png";
 import cafe from "../project icons/cafe.png";
 import mixertruck from "../project icons/mixer-truck (1).png";
 import constructionsite from "../project icons/construction-site.png";
 import wrekingball from "../project icons/wrecking-ball.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS with options
+  }, []);
+
   return (
     <div
       className="text-white p-4 py-16"
@@ -35,6 +41,7 @@ const Projects = () => {
               borderImage: "linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.2)) 1",
               boxShadow: "0 0 10px rgba(255, 255, 255, 0.6)"
             }}
+            data-aos="fade-up" // AOS animation
           >
             <Project imgSrc={project.imgSrc} title={project.title} description={project.description} />
           </div>
