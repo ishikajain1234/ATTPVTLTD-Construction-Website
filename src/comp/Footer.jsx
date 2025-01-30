@@ -1,6 +1,6 @@
 import Whatsapp from "@/socials icons/Whatsapp";
 import Instagram from "@/socials icons/Instagram";
-import {Landmark} from "lucide-react";
+import { Landmark } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import Linkedin from "@/socials icons/Linkedin";
@@ -82,8 +82,13 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Made By Section */}
+      <div className="text-center mt-6 text-gray-400">
+        Made with ❤️ by Ishika & Arjun
+      </div>
+
       {/* Copyright Section */}
-      <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+      <div className="border-t border-gray-700 mt-4 pt-4 text-center text-gray-400">
         &copy; {new Date().getFullYear()} Civil-Site. All rights reserved.
       </div>
     </footer>
