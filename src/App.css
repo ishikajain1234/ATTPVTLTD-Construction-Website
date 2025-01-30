@@ -1,3 +1,27 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Preloader style */
+.preloader {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Postloading style */
+.postloading {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.postloading.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
